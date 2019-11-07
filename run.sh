@@ -27,6 +27,7 @@
 : ${DIR_NAME:="bacula"}
 : ${DIR_IP:="192.168.1.14"}
 : ${FD_NAME:="bacula"}
+: ${HEART_BEAT:="5 seconds"}
 
 # Only one variable is required, FD_PASSWORD. MON_FD_PASSWORD is derived from it.
 if [ -z "${FD_PASSWORD}" ]; then
@@ -42,6 +43,7 @@ CONFIG_VARS=(
   DIR_NAME
   MON_NAME
   MON_FD_PASSWORD
+  HEART_BEAT
 )
 
 if [ -z "${DIR_IP}" ]; then
